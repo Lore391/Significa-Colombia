@@ -1882,23 +1882,19 @@
 </head>
 <body>
 
-<!-- Version 39: cuando alguien abre un correo de invitación/confirmación/
+<!-- Version 40: cuando alguien abre un correo de invitación/confirmación/
      recuperación de Netlify Identity (el usuario y clave de Lore para
-     /admin), Netlify manda ese enlace a la portada del sitio, no al panel
-     -- y sin este script, el token en la URL no lo procesa nadie y la
-     persona solo ve la página normal, sin ningún formulario para crear su
-     clave. Este bloque carga el mismo widget de identidad que usa Decap y,
-     si detecta uno de esos tokens en la URL, manda directo a /admin/ para
-     que el formulario de "crear tu contraseña" aparezca ahí. En el
-     Artifact de Claude (sin repositorio/Identity detrás) este script
-     externo no carga -- la comprobación de abajo simplemente no hace
-     nada, sin romper nada. -->
+     /admin), Netlify manda ese enlace a la portada del sitio, no al panel.
+     Este widget es el que sabe leer ese token en la URL y abrir su propia
+     ventana emergente para crear la contraseña -- eso ya lo hace solo, sin
+     que nosotros lo mandemos a ningún lado. (En V39 este script además
+     redirigía a /admin/, pero ahí el router interno de Decap alcanza a
+     tocar el token antes que el widget y lo daña -- por eso en V40 se quitó
+     ese redirect: el token se procesa aquí mismo, en la portada, donde no
+     hay nada más compitiendo por la URL.) En el Artifact de Claude (sin
+     repositorio/Identity detrás) este script externo simplemente no carga,
+     sin romper nada. -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  if (window.netlifyIdentity && /[#&](confirmation_token|invite_token|recovery_token|email_change_token)=/.test(window.location.hash)) {
-    window.location.href = '/admin/' + window.location.hash;
-  }
-</script>
 
 <header class="site halftone">
   <div class="wrap site-bar">
