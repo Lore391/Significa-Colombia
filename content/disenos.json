@@ -19,6 +19,56 @@
       "categoria": "Running",
       "titulo": "Porque puedo, porque quiero",
       "imagen": "/uploads/disenos/runner-porque-puedo.jpg"
+    },
+    {
+      "categoria": "Running",
+      "titulo": "Fitness, entrena duro",
+      "imagen": "/uploads/disenos/runner-train-hard.jpg"
+    },
+    {
+      "categoria": "Running",
+      "titulo": "Running late is my cardio",
+      "imagen": "/uploads/disenos/runner-running-late-cardio.jpg"
+    },
+    {
+      "categoria": "Running",
+      "titulo": "Move on",
+      "imagen": "/uploads/disenos/runner-move-on.jpg"
+    },
+    {
+      "titulo": "Run",
+      "categoria": "Running",
+      "imagen": "/uploads/disenos/runner-run-azul-noche.jpg"
+    },
+    {
+      "titulo": "No excuses, finish strong",
+      "imagen": "/uploads/disenos/runner-no-excuses.jpg",
+      "categoria": "Running"
+    },
+    {
+      "categoria": "Running",
+      "titulo": "Soy runner",
+      "imagen": "/uploads/disenos/runner-soy-runner.jpg"
+    },
+    {
+      "categoria": "Running",
+      "titulo": "Run silueta en movimiento",
+      "imagen": "/uploads/disenos/runner-silueta-en-movimiento.jpg"
+    },
+    {
+      "titulo": "Runner tabla periódica",
+      "categoria": "Running",
+      "imagen": "/uploads/disenos/runner-tabla-periodica.jpg"
+    },
+    {
+      "titulo": "Las excusas no queman calorías",
+      "categoria": "Running",
+      "imagen": "/uploads/disenos/runner-las-excusas-no-queman.jpg"
+    },
+    {
+      "titulo": "Adventure ",
+      "categoria": "Running",
+      "imagen": "/uploads/disenos/runner-adventure-encuentra-tu-aventura.jpeg"
     }
   ]
 }
