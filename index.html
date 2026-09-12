@@ -2623,30 +2623,38 @@
     var designPickerGrid = document.getElementById('design-picker-grid');
     var pickerTarget = null; // { z, zs } -- a qué zona se aplica lo elegido
 
-    if (designPicker && designPickerGrid && DESIGN_LIBRARY.length) {
-      DESIGN_LIBRARY.forEach(function (item) {
-        var cell = document.createElement('button');
-        cell.type = 'button';
-        cell.className = 'design-picker-item';
-        var img = document.createElement('img');
-        img.src = item.src;
-        img.alt = item.label;
-        var span = document.createElement('span');
-        span.textContent = item.label;
-        cell.appendChild(img);
-        cell.appendChild(span);
-        cell.addEventListener('click', function () {
-          if (!pickerTarget) return;
-          var z = pickerTarget.z, zs = pickerTarget.zs;
-          zs.imgSrc = item.src;
-          applyDefaultPosition(z, zs);
-          placeZoneImg(z, zs);
-          renderUploadCards();
-          updateWhatsAppLink();
-          closeDesignPicker();
-        });
-        designPickerGrid.appendChild(cell);
+    // Version 41: además de los diseños fijos de arriba (horneados en el
+    // HTML), se pueden sumar más diseños subidos por Lore desde /admin
+    // (colección "Diseños para elegir", guardada en content/plantillas.json).
+    // Se factoriza la creación de cada celda para poder usarla tanto con los
+    // fijos como con los que lleguen después por fetch.
+    function addDesignPickerCell(item) {
+      if (!designPickerGrid) return;
+      var cell = document.createElement('button');
+      cell.type = 'button';
+      cell.className = 'design-picker-item';
+      var img = document.createElement('img');
+      img.src = item.src;
+      img.alt = item.label;
+      var span = document.createElement('span');
+      span.textContent = item.label;
+      cell.appendChild(img);
+      cell.appendChild(span);
+      cell.addEventListener('click', function () {
+        if (!pickerTarget) return;
+        var z = pickerTarget.z, zs = pickerTarget.zs;
+        zs.imgSrc = item.src;
+        applyDefaultPosition(z, zs);
+        placeZoneImg(z, zs);
+        renderUploadCards();
+        updateWhatsAppLink();
+        closeDesignPicker();
       });
+      designPickerGrid.appendChild(cell);
+    }
+
+    if (designPicker && designPickerGrid) {
+      DESIGN_LIBRARY.forEach(addDesignPickerCell);
 
       designPicker.querySelectorAll('[data-picker-close]').forEach(function (el) {
         el.addEventListener('click', closeDesignPicker);
@@ -2654,6 +2662,17 @@
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && !designPicker.hidden) closeDesignPicker();
       });
+
+      fetch('content/plantillas.json', { cache: 'no-store' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (data) {
+          if (!data || !Array.isArray(data.items) || !data.items.length) return;
+          data.items.forEach(function (it) {
+            if (!it || !it.imagen) return;
+            addDesignPickerCell({ label: it.nombre || 'Diseño Significa', src: it.imagen });
+          });
+        })
+        .catch(function () { /* sin content/plantillas.json todavía */ });
     }
 
     function openDesignPicker(z, zs) {
