@@ -3,6 +3,10 @@
     {
       "imagen": "/uploads/plantillas/homero.png",
       "nombre": "Homero"
+    },
+    {
+      "nombre": "Me lo dijo ChatGPT",
+      "imagen": "/uploads/plantillas/me-lo-dijo-chatgpt.png"
     }
   ]
 }
