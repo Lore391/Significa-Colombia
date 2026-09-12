@@ -69,11 +69,6 @@
       "titulo": "Adventure ",
       "categoria": "Running",
       "imagen": "/uploads/disenos/runner-adventure-encuentra-tu-aventura.jpeg"
-    },
-    {
-      "categoria": "Gimnasio",
-      "titulo": "Gym",
-      "imagen": "/uploads/disenos/duff.jpeg"
     }
   ]
 }
