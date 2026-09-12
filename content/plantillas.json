@@ -7,6 +7,26 @@
     {
       "nombre": "Me lo dijo ChatGPT",
       "imagen": "/uploads/plantillas/me-lo-dijo-chatgpt.png"
+    },
+    {
+      "imagen": "/uploads/plantillas/batman.png",
+      "nombre": "Batman"
+    },
+    {
+      "imagen": "/uploads/plantillas/just-do-it.png",
+      "nombre": "JUST DO IT"
+    },
+    {
+      "imagen": "/uploads/plantillas/donuts-homero.png",
+      "nombre": "Donuts "
+    },
+    {
+      "imagen": "/uploads/plantillas/homero-equis.png",
+      "nombre": "Homer"
+    },
+    {
+      "imagen": "/uploads/plantillas/joker-nike.png",
+      "nombre": "Joker Nike"
     }
   ]
 }
