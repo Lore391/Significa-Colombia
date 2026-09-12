@@ -69,6 +69,34 @@
       "titulo": "Adventure ",
       "categoria": "Running",
       "imagen": "/uploads/disenos/runner-adventure-encuentra-tu-aventura.jpeg"
+    },
+    {
+      "categoria": "Infantil",
+      "imagen": "/uploads/disenos/nuevodiseno-auto-carreras-sonrisa.avif"
+    },
+    {
+      "categoria": "Infantil",
+      "imagen": "/uploads/disenos/nuevodiseno-trio-pop-estrella-2.jpg"
+    },
+    {
+      "categoria": "Infantil",
+      "imagen": "/uploads/disenos/nuevodiseno-alien-azul-familia.jpg"
+    },
+    {
+      "categoria": "Infantil",
+      "imagen": "/uploads/disenos/nuevodiseno-vaquero-astronauta-amigos.avif"
+    },
+    {
+      "categoria": "Infantil",
+      "imagen": "/uploads/disenos/nuevodiseno-collage-varios-ver-nota.png"
+    },
+    {
+      "categoria": "Infantil",
+      "imagen": "/uploads/disenos/nuevodiseno-gatos-modo-meow.jpg"
+    },
+    {
+      "categoria": "Infantil",
+      "imagen": "/uploads/disenos/nuevodiseno-astronauta-viaje-espacial.jpg"
     }
   ]
 }
