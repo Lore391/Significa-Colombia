@@ -4,6 +4,11 @@
       "categoria": "Running",
       "titulo": "Corre tu propia carrera",
       "imagen": "/uploads/disenos/runner-corre-tu-propia-carrera.jpg"
+    },
+    {
+      "categoria": "Running",
+      "titulo": "Run urbano",
+      "imagen": "/uploads/disenos/runner-run-urbano.jpg"
     }
   ]
 }
