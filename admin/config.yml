@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Esta es la carpeta donde Decap va a guardar, dentro de tu propio
+# repositorio de GitHub, cada foto que subas desde /admin.
+media_folder: "uploads/disenos"
+public_folder: "/uploads/disenos"
+
+collections:
+  - name: "disenos"
+    label: "Diseños del catálogo"
+    files:
+      - name: "catalogo"
+        label: "Diseños por categoría"
+        file: "content/disenos.json"
+        fields:
+          - name: "items"
+            label: "Diseños"
+            widget: "list"
+            label_singular: "Diseño"
+            summary: "{{fields.categoria}} — {{fields.titulo}}"
+            fields:
+              - name: "categoria"
+                label: "Categoría"
+                widget: "select"
+                options: ["Gimnasio", "Divertidas", "Infantil", "Running"]
+              - name: "titulo"
+                label: "Título (opcional)"
+                widget: "string"
+                required: false
+              - name: "imagen"
+                label: "Foto"
+                widget: "image"
