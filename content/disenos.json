@@ -97,6 +97,26 @@
     {
       "categoria": "Infantil",
       "imagen": "/uploads/disenos/nuevodiseno-astronauta-viaje-espacial.jpg"
+    },
+    {
+      "categoria": "Divertidas",
+      "imagen": "/uploads/disenos/4e749a99d62e85eef8402155b0154fa3.jpg"
+    },
+    {
+      "categoria": "Divertidas",
+      "imagen": "/uploads/disenos/homero.jpg"
+    },
+    {
+      "categoria": "Divertidas",
+      "imagen": "/uploads/disenos/0c4402c8d7d24b40bc649fa1de814d67-goods.jpeg"
+    },
+    {
+      "categoria": "Divertidas",
+      "imagen": "/uploads/disenos/5b602eb3-32f4-4b15-a25b-9c93da2331b5.jpeg"
+    },
+    {
+      "imagen": "/uploads/disenos/689780b16d70070cb2699a37ac1bcd8f.jpeg",
+      "categoria": "Divertidas"
     }
   ]
 }
