@@ -4,6 +4,21 @@
       "categoria": "Running",
       "titulo": "Corre tu propia carrera",
       "imagen": "/uploads/disenos/runner-corre-tu-propia-carrera.jpg"
+    },
+    {
+      "categoria": "Running",
+      "titulo": "Run urbano",
+      "imagen": "/uploads/disenos/runner-run-urbano.jpg"
+    },
+    {
+      "categoria": "Running",
+      "titulo": "The Runner ",
+      "imagen": "/uploads/disenos/runner-maraton-abbey-road.jpg"
+    },
+    {
+      "categoria": "Running",
+      "titulo": "Porque puedo, porque quiero",
+      "imagen": "/uploads/disenos/runner-porque-puedo.jpg"
     }
   ]
 }
