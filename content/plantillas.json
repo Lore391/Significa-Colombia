@@ -27,6 +27,14 @@
     {
       "imagen": "/uploads/plantillas/joker-nike.png",
       "nombre": "Joker Nike"
+    },
+    {
+      "imagen": "/uploads/plantillas/64994238679d8e897a05d6613e6c63c5.png",
+      "nombre": "NASA"
+    },
+    {
+      "imagen": "/uploads/plantillas/gemini_generated_image_n8pt2vn8pt2vn8pt.png",
+      "nombre": "Nasa"
     }
   ]
 }
